@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="connect.com.credr.connect.ui.franchiselogistics.genericpractice.FranchiseAssignRunnersActivityGeni">
+    <android.support.design.widget.AppBarLayout
+        style="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/aap_Bar"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppTheme.PopupOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            android:visibility="visible"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="enterAlwaysCollapsed|snap|enterAlways"
+            app:navigationIcon="@drawable/left"
+            app:titleTextColor="@color/white"
+            app:titleTextAppearance="@style/MyTheme.ActionBar.TitleText" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/aap_Bar"
+        android:id="@+id/rv_assignrunner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_background"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:id="@+id/tvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/empty_list"
+        android:textColor="@color/primaryText"
+        android:textSize="@dimen/size_14sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+    <include
+        android:layout_centerInParent="true"
+        android:id="@+id/llNetworkError"
+        layout="@layout/layout_network_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+
+
+
+</RelativeLayout>
